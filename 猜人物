@@ -4,12 +4,12 @@ import time
 tip1 = '住在北京'
 tip2 = '今年28岁'
 tip3 = '篮球运动员'
-tip3 = '热衷于做慈善'
-tip4 = '有3个孩子'
-tip5 = '姓刘'
+tip4 = '热衷于做慈善'
+tip5 = '有3个孩子'
+tip6 = '姓刘'
 true_name = '刘迪'
 
-characters = ['tip1','tip2','tip3','tip4','tip5']
+characters = ['tip1','tip2','tip3','tip4','tip5','tip6']
 
 print('*'*60)
 print('''
@@ -35,11 +35,13 @@ while len(characters) > 0:
   if guess == true_name:
     if count < 2:
       print('太棒了！恭喜你猜对了，你一共猜了%d次，获得**王者称号**'%count)
+      break
     else:
       print('恭喜你猜对了，你一共猜了%d次，获得**青铜称号**'%count)
-  else：
-    if count == 5:
+      break
+  else:
+    characters.pop(index)
+    if count == 6:
        print('太衰了，你没有猜出来，游戏结束！')
-     else：
-      characters.pop(index)
+     else:
       print('对不起，你猜错了，请继续...')
